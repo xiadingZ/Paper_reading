@@ -1,12 +1,14 @@
 ### MiCT: Mixed 3D/2D Convolutional Tube for Human Action Recognition
 
-这篇文章的主要工作就是将3D CNN与2D CNN结合，借鉴通过concat和residual连接，减少3D block的同时增加了网络的深度，相比传统的3D CNN，在减少了训练复杂度的情况下提升了精度。
+这篇文章的主要工作就是将3D CNN与2D CNN结合，通过concat和residual连接，减少3D block的同时增加了网络的深度，相比传统的3D CNN，在减少了训练复杂度的情况下提升了精度。
 
 #### Concat connection
 
-如下图所示，在每个3D卷积层后接一个2D卷积层，2D卷积层的输出作为下一个3D卷积层的输入。
+如下图所示，在每个3D卷积层后接一个2D卷积层，2D卷积层的输入为3D卷积层的输出，2D卷积层的输出作为下一个3D卷积层的输入。这样就增加了网络的深度。
 
 ![p0](imgs_xd/p0.png)
+
+
 
 #### Residual connection
 
