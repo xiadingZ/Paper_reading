@@ -2,7 +2,7 @@
 
 这篇文章提出了coarse to fine网络用来提取特征，以及asynchronous fusion网络来融合特征流。
 
-![p30](/Users/xd/code/Paper_reading/imgs_xd/p30.png)
+![p30](imgs_xd/p30.png)
 
 a图表示了coarse to fine的流程，每个动作动作先是分类到一个大的set中，之后再分类到中等set中，最后再进行精确分类。这样就能一层一层地提取一个动作集的共享的特征。这些动作集是自动地动态划分的。b图表示了异步融合网络，将不同时间步的appearance与motion特征进行融合。
 
